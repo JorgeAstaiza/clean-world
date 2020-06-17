@@ -10,7 +10,6 @@ class SolicitudesPendientesRouter {
 	config(): void {
 		this.router.get('/', solicitudesPendientesController.listSolicitudes) //ruta inicial de mi servidor
 		this.router.put('/:id', solicitudesPendientesController.updateSolicitud);
-		
 	}
 }
 

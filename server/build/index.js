@@ -12,6 +12,18 @@ const operatorRoutes_1 = __importDefault(require("./routes/operatorRoutes"));
 const userRoutes_1 = __importDefault(require("./routes/userRoutes"));
 const rankingRoutes_1 = __importDefault(require("./routes/rankingRoutes"));
 const solicitudesPendientesRoutes_1 = __importDefault(require("./routes/solicitudesPendientesRoutes"));
+const rechazarSolicitudesRoutes_1 = __importDefault(require("./routes/rechazarSolicitudesRoutes"));
+const mensajeRechazadoRoutes_1 = __importDefault(require("./routes/mensajeRechazadoRoutes"));
+const totalPlasticoRoutes_1 = __importDefault(require("./routes/totalPlasticoRoutes"));
+const totalPapelRoutes_1 = __importDefault(require("./routes/totalPapelRoutes"));
+const totalCartonRoutes_1 = __importDefault(require("./routes/totalCartonRoutes"));
+const totalVidrioRoutes_1 = __importDefault(require("./routes/totalVidrioRoutes"));
+const totalLatasRoutes_1 = __importDefault(require("./routes/totalLatasRoutes"));
+const totalMujeresRoutes_1 = __importDefault(require("./routes/totalMujeresRoutes"));
+const totalHombresRoutes_1 = __importDefault(require("./routes/totalHombresRoutes"));
+const totalRegistroMesNoviembreRoutes_1 = __importDefault(require("./routes/totalRegistroMesNoviembreRoutes"));
+const totalRegistrosMesDiciembreRoutes_1 = __importDefault(require("./routes/totalRegistrosMesDiciembreRoutes"));
+const totalRegistrosMesEneroRoutes_1 = __importDefault(require("./routes/totalRegistrosMesEneroRoutes"));
 class Server {
     constructor() {
         this.app = express_1.default();
@@ -31,6 +43,18 @@ class Server {
         this.app.use('/api/operarios', operatorRoutes_1.default);
         this.app.use('/api/ranking', rankingRoutes_1.default);
         this.app.use('/api/solicitudes', solicitudesPendientesRoutes_1.default);
+        this.app.use('/api/rechazar', rechazarSolicitudesRoutes_1.default);
+        this.app.use('/api/mensaje-rechazar', mensajeRechazadoRoutes_1.default);
+        this.app.use('/api/total-plastico', totalPlasticoRoutes_1.default);
+        this.app.use('/api/total-papel', totalPapelRoutes_1.default);
+        this.app.use('/api/total-carton', totalCartonRoutes_1.default);
+        this.app.use('/api/total-vidrio', totalVidrioRoutes_1.default);
+        this.app.use('/api/total-latas', totalLatasRoutes_1.default);
+        this.app.use('/api/total-mujeres', totalMujeresRoutes_1.default);
+        this.app.use('/api/total-hombres', totalHombresRoutes_1.default);
+        this.app.use('/api/total-reg-noviembre', totalRegistroMesNoviembreRoutes_1.default);
+        this.app.use('/api/total-reg-diciembre', totalRegistrosMesDiciembreRoutes_1.default);
+        this.app.use('/api/total-reg-enero', totalRegistrosMesEneroRoutes_1.default);
     }
     //inicio el servidor con express
     start() {
