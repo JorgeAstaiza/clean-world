@@ -36,7 +36,7 @@ class Server {
 		this.app.use(morgan('dev')) //para poder ver las peticiones por consola
 		this.app.use(cors());
 		this.app.use(express.json());
-		this.app.use(express.urlencoded({extended: false}));
+		this.app.use(express.urlencoded({extended: true}));
 	}
 	routes(): void {
 		this.app.use('/login', indexRoutes);

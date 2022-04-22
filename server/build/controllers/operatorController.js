@@ -46,6 +46,7 @@ class OperatorController {
     updateOperator(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { id } = req.params;
+            console.log(req.body);
             yield database_1.default.query('UPDATE operario set ? WHERE id_email_operario = ?', [req.body, id]);
             res.json({ text: 'actualizando' });
         });

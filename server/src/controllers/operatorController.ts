@@ -30,6 +30,7 @@ class OperatorController {
 
 	public async updateOperator(req: Request, res: Response): Promise<void>{
 		const { id } = req.params;
+		console.log(req.body)
 		await pool.query('UPDATE operario set ? WHERE id_email_operario = ?', [req.body, id])
 		res.json({text: 'actualizando'})
 	}
